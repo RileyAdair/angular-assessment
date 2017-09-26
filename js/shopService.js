@@ -4,7 +4,8 @@ app.service('shopService',function($http){
     return $http.get('https://practiceapi.devmountain.com/products')
   }
 
-  this.getProductId = function(id){
+  this.getProductId = function(item){
+    let id = item.id;
     return $http.get(' https://practiceapi.devmountain.com/products/' + id)
   }
 
